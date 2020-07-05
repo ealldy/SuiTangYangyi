@@ -14,12 +14,18 @@ public class Stage extends Thread {
             ArmyRunnalbe armyTaskOfSuiDynasty = new ArmyRunnalbe();
 
 
-            Thread armyOfRevolt = new Thread(armyTaskOfRevolt, "农民起义军");
-            Thread armyOfSuiDynasty = new Thread(armyTaskOfSuiDynasty, "隋军");
+            Thread armyOfRevolt1 = new Thread(armyTaskOfRevolt, "农民起义军1");
+            Thread armyOfRevolt2 = new Thread(armyTaskOfRevolt, "农民起义军2");
+
+            Thread armyOfSuiDynasty1 = new Thread(armyTaskOfSuiDynasty, "隋军1");
+            Thread armyOfSuiDynasty2 = new Thread(armyTaskOfSuiDynasty, "隋军2");
 
             //启动线程，让军队开始作战
-            armyOfRevolt.start();
-            armyOfSuiDynasty.start();
+            armyOfRevolt1.start();
+            //armyOfRevolt2.start();
+            armyOfSuiDynasty1.start();
+            armyOfSuiDynasty2.start();
+
 
 
             //舞台线程休眠，大家专心观看军队厮杀
@@ -54,7 +60,7 @@ public class Stage extends Thread {
             } else {
                 System.out.println("隋军胜利！");
                 System.out.println("程咬金将军战死！");
-                System.out.println("虽然战争结束，但依旧人们苦不堪言");
+                System.out.println("虽然战争结束，但依旧人们苦不堪言，将继续发动战争");
                 p = true;
 
             }
